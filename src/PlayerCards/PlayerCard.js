@@ -18,7 +18,7 @@ class PlayerCard extends Component {
             <Card className="card" key={this.state.player.id} onClick={(e) => this.handleClick(e)}>
                 <CardActionArea>
                     <div className="player-image-container">
-                        <img className="player-image" src={imagePath} />
+                        <img className="player-image" src={imagePath} alt="player"/>
                     </div>
                     <CardContent>
                         <Typography gutterBottom variant="h6" component="h2">

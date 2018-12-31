@@ -74,7 +74,7 @@ class HitterSeasonStats extends Component {
                   {statLine.bb}
                 </TableCell>
                 <TableCell style={tableCellStyle}>
-                  {numeral(statLine.avg).format}
+                  {numeral(statLine.avg).format('.000')}
                 </TableCell>
                 <TableCell style={tableCellStyle}>
                   {numeral(statLine.obp).format('.000')}

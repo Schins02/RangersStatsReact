@@ -17,7 +17,7 @@ class HitterGameRecords extends Component {
   handleChangePage = (event, page) => {
     this.setState({ page });
   };
-  handleChangeRowsPerPage = event => {
+  handleChangeRowsPerPage = (event) => {
     this.setState({ rowsPerPage: event.target.value });
   };
 
@@ -45,25 +45,6 @@ class HitterGameRecords extends Component {
           </TableRow>
         </TableHead>
         <TableBody>
-          {/* {this.state.gameRecords.slice(0, 25).map(gameRecord => {
-            return (
-              <TableRow key={gameRecord.id}>
-                <TableCell style={tableCellStyle}>{gameRecord.gameDate}</TableCell>
-                <TableCell style={tableCellStyle}>{gameRecord.ab}</TableCell>
-                <TableCell style={tableCellStyle}>{gameRecord.h}</TableCell>
-                <TableCell style={tableCellStyle}>{gameRecord.doubles}</TableCell>
-                <TableCell style={tableCellStyle}>{gameRecord.triple}</TableCell>
-                <TableCell style={tableCellStyle}>{gameRecord.hr}</TableCell>
-                <TableCell style={tableCellStyle}>{gameRecord.rbi}</TableCell>
-                <TableCell style={tableCellStyle}>{gameRecord.bb}</TableCell>
-                <TableCell style={tableCellStyle}>{gameRecord.k}</TableCell>
-                <TableCell style={tableCellStyle}>{gameRecord.avg}</TableCell>
-                <TableCell style={tableCellStyle}>{gameRecord.obp}</TableCell>
-                <TableCell style={tableCellStyle}>{gameRecord.slg}</TableCell>
-                <TableCell style={tableCellStyle}>{gameRecord.wrcPlus}</TableCell>
-              </TableRow>
-            );
-          })} */}
           {this.state.gameRecords.slice(this.state.page * this.state.rowsPerPage,
             this.state.page * this.state.rowsPerPage + this.state.rowsPerPage)
             .map(gameRecord => {

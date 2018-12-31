@@ -5,14 +5,11 @@ import PitcherSeasonStats from './PitcherSeasonStats';
 
 class SeasonStats extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = { 
-            players: props.players, 
-            hitterStats: props.hitterStats, 
-            pitcherStats: props.pitcherStats 
-        }
-    }
+    state = {            
+        players: this.props.players, 
+        hitterStats: this.props.hitterStats, 
+        pitcherStats: this.props.pitcherStats
+     }
 
     render() {
         return (

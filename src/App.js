@@ -22,6 +22,8 @@ class App extends Component {
       case "Season Stats":
         this.showSeasonStats();
         break;
+      default:
+        break;
     }
   }
 
@@ -50,8 +52,7 @@ class App extends Component {
   }
 
   showPlayerProfile = (player) => {
-    var gameRecordType = player.position == 'P' ? 'pitcher-game-record' : 'hitter-game-record'
-    var gameRecords;
+    var gameRecordType = player.position === 'P' ? 'pitcher-game-record' : 'hitter-game-record'
 
     axios
       .get(`${process.env.REACT_APP_RANGERS_STATS_API}/${gameRecordType}/${player.id}`)
@@ -63,8 +64,6 @@ class App extends Component {
                            showRoster={this.showRoster}>
             </PlayerProfile>
         }));
-
-
   }
 
   render() {

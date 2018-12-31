@@ -45,7 +45,7 @@ class PlayerProfile extends Component {
                 <PitcherGameRecords gameRecords={this.state.gameRecords}></PitcherGameRecords>
             </Paper>
         }
-        {this.state.player.position != "P" &&
+        {this.state.player.position !== "P" &&
         <Paper className="hitter-profile-paper">
             <HitterGameRecords gameRecords={this.state.gameRecords}></HitterGameRecords>
         </Paper>
