@@ -1,4 +1,8 @@
 
+.App {
+  background: #eeeeee;
+}
+
 .home-splash {
   padding-top: 1rem;
   max-width: 100%;
@@ -17,10 +21,61 @@
   margin-left: 2rem;
 }
 
-/*.pe-tab.pe-text-button.pe-button.pe-button--selected .pe-button__content {
-    color: white !important;
-}*/
-
 .pe-text-button:not(.pe-button--disabled) {
   color :rgb(33, 150, 243) !important;
+}
+
+.app-container {
+  display: flex;
+}
+
+.season-stats-container {
+  display: flex;
+  align-items: center;
+  padding: 2rem 2rem .5rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table-cell {
+  padding-left: '12px' !important;
+  padding-right: '28px' !important;
+}
+
+.roster-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  overflow: visible !important;
+  margin: 2rem 2rem;
+}
+
+.player-image-container {
+  display: flex;
+  align-items: center;
+}
+
+.player-image {
+  margin: 0 auto !important;
+}
+
+.player-profile-container {
+  display: flex;
+  align-content: space-between;
+  padding: 1.5rem;
+}
+
+.pitcher-profile-paper {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.hitter-profile-paper {
+  margin-top: 2rem;
 }

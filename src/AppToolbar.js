@@ -14,10 +14,9 @@ TabsCSS.addStyle(".tabs", {
 })
 
 class AppToolbar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {selectedTabIndex: 0 };
-}
+
+  state = { selectedTabIndex: 0 };
+
   render() {
     return  (
       <Toolbar className="app-toolbar">
@@ -31,33 +30,20 @@ class AppToolbar extends Component {
           ]}
           autofit
           menu
-          selectedTab={0}
+          selectedTabIndex={0}
           className="tabs"
         />
       </Toolbar>
-      )     
+      );     
   }
 
   onTabNav(tab) {
     if(tab.index !== this.state.selectedTabIndex) {
-      switch(tab.options.label) {
-        case "Home" :
-         console.log('home');
-         break;
-        case "Roster" :
-          console.log("roser");
-          break;
-        case "Season Stats":
-          console.log("Season stats")
-          break;
-
-      }
+      this.props.onTabChange(tab);
     }
     this.setState({ selectedTabIndex: tab.index })
-
   }
 
-  
 }
 
 export default AppToolbar;
