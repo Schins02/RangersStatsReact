@@ -9,7 +9,7 @@ import PlayerProfile from './PlayerProfile';
 
 class App extends Component {
 
-  state = {contents: <HomeSplash></HomeSplash> }
+  state = {contents: <HomeSplash></HomeSplash>}
 
   changeTab(tab) {
     switch(tab.options.label) {
